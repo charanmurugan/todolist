@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCEK3wdUPsd4E2REc2j9G7A7CIUEE6FhjtHQ&usqp=CAU">
+    <title>To-do</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="sticky">
+  <%=kindOfDay%>
+</div>
+<div class="fixed">
+  <i class="fa fa-list-alt" aria-hidden="true"></i> TO-DO LIST
+</div>
+
+  <div class="main_div">              
+    <div  class="<%=value%>">
+      <% lists.forEach(function(ele){ %>
+      <form action="/delete" method="POST">
+          <div class="box">
+            <div>
+              <input class="mycheckbox" name="checked" value="<%=ele._id%>" type="checkbox" onChange="this.form.submit()">
+              <p class="list_value">  <%=ele.name%></p>
+            </div>
+                     
+          </div>        
+       <% }) %>
+      </form>
+
+        
+</div>
+  <form action="/" method="POST">
+      <div class="form-group input_format" >
+   <input type="text" class="form-control input_get" name="todo_value" autofocus autocomplete="off"  required> 
+   <button type="submit" class="btn btn-primary button_format"><i class="fa fa-plus" aria-hidden="true"></i></button> 
+  </form>
+  
+  </div>  
+  <p class="copyright">&#169charanmurugan-2021</p>
+  <script src="../index.js"></script>
+</body>
+</html>
