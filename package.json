@@ -10,7 +10,8 @@
   "author": "charan_murugan",
   "license": "ISC",
   "engines": {
-    "node": "14.15.2"
+    "node": "14.15.2",
+    "npm": "6.14.10"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
