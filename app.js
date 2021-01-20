@@ -9,7 +9,7 @@ app.use(express.static("public"));
 let today="";
 const lists=[];
 let value="";
-mongoose.connect("mongodb+srv://charanmurugan:Charan2002@charanmurugan.axjh5.mongodb.net/todolistdb?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.connect("mongodb://localhost:27017", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 const todoSchema=new mongoose.Schema({
     name:String
 });
